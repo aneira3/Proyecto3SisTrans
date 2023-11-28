@@ -10,15 +10,18 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 import uniandes.edu.co.demo.modelo.Bar;
+import uniandes.edu.co.demo.modelo.habitaciones;
 import uniandes.edu.co.demo.repository.BarRepository;
+import uniandes.edu.co.demo.repository.habitacionesRepository;
 import uniandes.edu.co.demo.repository.BarRepository.RespuestaGrupo;
 
 @ComponentScan({"uniandes.edu.co.demo.repository"})
 @SpringBootApplication
+@EnableMongoRepositories
 public class DemoApplication  implements CommandLineRunner{
 
 	@Autowired
-	private BarRepository barRepository;
+	private habitacionesRepository habRepo;
 
 
 	public static void main(String[] args) {
@@ -27,7 +30,13 @@ public class DemoApplication  implements CommandLineRunner{
 
 	@Override
 	public void run(String... strings) throws Exception{
+		List<habitaciones> res = habRepo.buscar();
+		for(habitaciones b: res){
+			System.out.println(b);
+		}
 
+
+/* 
 		//QUERIES
 		List<Bar> res = barRepository.buscarPorId(60);
 
@@ -49,6 +58,7 @@ public class DemoApplication  implements CommandLineRunner{
 
 		//Update
 		barRepository.aniadirBebidaABar(101, "Bebida de prueba 2", "aperitivo", 10, "diurno", 10);
+		*/
 	}
 
 }

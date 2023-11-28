@@ -7,9 +7,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.ToString;
 
-@Document(collection="bares")
+//@Document(collection="bares")
 @ToString
-public class Bar {
+public class Bar {/* 
     @Id
     private int id;
     private String nombre;
@@ -59,4 +59,5 @@ public class Bar {
     public void setOferta_bebidas(List<Bebida> oferta_bebidas) {
         this.oferta_bebidas = oferta_bebidas;
     }
+    */
 }

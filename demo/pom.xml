@@ -12,7 +12,7 @@
 	<artifactId>parranderos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>parranderos</name>
-	<description>Aplicación de prueba para el curso Sistemas Transaccionales</description>
+	<description>Aplicación de hoteles para el curso Sistemas Transaccionales</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
