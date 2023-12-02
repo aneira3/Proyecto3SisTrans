@@ -15,8 +15,9 @@ public class habitaciones {
     private String tipo;
     private int capacidad;
 
-    public habitaciones(int numero_habitacion, float costo, String tipo, int capacidad) {
+    public habitaciones(String _id, int numero_habitacion, float costo, String tipo, int capacidad) {
         super();
+        this._id = _id;
         this.numero_habitacion = numero_habitacion;
         this.costo = costo;
         this.tipo = tipo;
@@ -53,6 +54,14 @@ public class habitaciones {
 
     public void setCapacidad(int capacidad) {
         this.capacidad = capacidad;
+    }
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
     }
     
 
